@@ -175,6 +175,8 @@ function handleSemesterButtonClick(event){
     const year = parseInt(event.target.dataset.year);
     const semester = parseInt(event.target.dataset.semester);
 
+    document.getElementById("gpaResult").textContent = ""; 
+
     let modules = [];
 
     if(buttonType === "custom"){
@@ -191,6 +193,7 @@ function handleSemesterButtonClick(event){
 
     
     document.getElementById("calculatorSection").style.display = "block";   //display the calculator section
+   
 }
 
 
