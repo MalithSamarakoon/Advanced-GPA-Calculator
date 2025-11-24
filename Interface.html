@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gpa calculator</title>
+    <script src="Script.js"></script>
+</head>
+<body>
+    <h1>GPA Calculator</h1>
+
+    <div id="syllabusSelector">
+        <p>Select your sysllabus</p>
+        <button data-syllabus="new">New Syllabus</button>
+        <button data-syllabus="old">Old Syllabus</button>
+    </div>
+
+    <div id="semesterButtonsContainer" style="display: none;">
+        
+    </div>
+
+    <div id="calculatorSection" style="display:none;">
+        <table id="moduleTable">
+            <thead>
+                <tr>
+                    <th>Module Name/Code</th>
+                    <th>Credit Points</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody id="moduleBody">
+                
+                <tr>
+                    <td><input type="text" placeholder="Enter module name"></td>
+                    <td><input type="number" placeholder="Enter credits" min="0"></td>
+                    <td>
+                        <select>
+                            <option value="">Select Grade</option>
+                            <option value="4.0">A+ (4.0)</option>
+                            <option value="4.0">A (4.0)</option>
+                            <option value="3.7">A- (3.7)</option>
+                            <option value="3.3">B+ (3.3)</option>
+                            <option value="3.0">B (3.0)</option>
+                            <option value="2.7">B- (2.7)</option>
+                            <option value="2.3">C+ (2.3)</option>
+                            <option value="2.0">C (2.0)</option>
+                            <option value="1.7">C- (1.7)</option>
+                            <option value="1.3">D+ (1.3)</option>
+                            <option value="1.0">D (1.0)</option>
+                            <option value="0.0">E (0.0)</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+
+        <button onclick="addModule()">+ Add Module</button>
+        <div id="gpaResult"></div>
+    </div>
+
+</body>
+</html>
